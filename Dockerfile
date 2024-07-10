@@ -1,4 +1,4 @@
-FROM misotolar/alpine:3.20.0 as build
+FROM misotolar/alpine:3.20.1 as build
 
 ENV USTREAMER_VERSION=6.12
 ARG SHA256=6ebfebdad21cf381f2026f0b0b0c9dc024b1dd6d156b71b7a6977fdbe2db8a0b
@@ -22,7 +22,7 @@ RUN set -ex; \
         /var/tmp/* \
         /tmp/*
 
-FROM misotolar/alpine:3.20.0
+FROM misotolar/alpine:3.20.1
 
 LABEL maintainer="michal@sotolar.com"
 
