@@ -1,7 +1,7 @@
-FROM misotolar/alpine:3.20.2 as build
+FROM misotolar/alpine:3.21.0 as build
 
-ENV USTREAMER_VERSION=6.17
-ARG SHA256=92af80c94ccea9a9b09a1e6a77b67389b7d4f1574f3683d5001e0f54fff89c94
+ENV USTREAMER_VERSION=6.18
+ARG SHA256=9bd57e18a05bda54012ac8c3e4b906ff23e7c69787dd246de30c70c9ae507d6b
 ADD https://github.com/pikvm/ustreamer/archive/refs/tags/v$USTREAMER_VERSION.tar.gz /tmp/ustreamer.tar.gz
 
 WORKDIR /build
@@ -22,7 +22,7 @@ RUN set -ex; \
         /var/tmp/* \
         /tmp/*
 
-FROM misotolar/alpine:3.20.3
+FROM misotolar/alpine:3.21.0
 
 LABEL maintainer="michal@sotolar.com"
 
